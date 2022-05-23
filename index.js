@@ -1,7 +1,7 @@
 const express = require("express");
 const multer = require('multer');
 const path = require("path");
-const mongoose = require("mongoose");
+const mongoose = require("mysql2");
 const Book = require("./models/book");
 const Student = require("./models/student");
 
