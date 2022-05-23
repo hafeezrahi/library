@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .active {
+        background-color: #04aa6d;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      tr:hover {
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Addbook.html">Add Book</a></li>
+        <li><a href="borrow.html">Borrow Book</a></li>
+        <li><a href="return.html">Return Book</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>All Books</h2>
+
+      <p>These book are avialable at the database.</p>
+
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th>student name</th>
+              <th>roll Number</th>
+              <th>Department</th>
+              <th>book name</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+           <% data.forEach(item => { %>
+                <tr>
+              <td><%= item.student name %> </td>
+              <td><%= item.roll Number %></td>
+              <td><%= item.Department %></td>
+              <td><%= item.Book name %></td>
+              <td><a href="/post/delete/<%= item.id %>" class="btn btn-outline-danger" >Delete</a></td>
+               </tr>
+          <% }) %>
+         
+      
+          
+      
+         
+          </tbody>
+        </table>
+      </div>
+  </body>
+</html>
